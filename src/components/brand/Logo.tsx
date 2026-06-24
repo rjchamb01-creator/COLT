@@ -1,0 +1,29 @@
+// COLT wordmark. The four letters use `currentColor` (so the logo inherits the
+// surrounding text colour on dark/light surfaces); the "O" is always Signal Red
+// — the wordmark's only accent. Never recolour the other letters or add a second
+// accent. Pass a `className` to size/colour it (e.g. "h-7 w-auto text-bone").
+export function Logo({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="-18 -18 310 156"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="COLT"
+      className={className}
+    >
+      <path
+        d="M43.66 17.6 A22 50 0 1 0 43.66 102.4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="20"
+      />
+      <path
+        d="M68 60 A32 60 0 1 0 132 60 A32 60 0 1 0 68 60 Z M88 60 A12 40 0 1 0 112 60 A12 40 0 1 0 88 60 Z"
+        fill="#FF2E1F"
+        fillRule="evenodd"
+      />
+      <path d="M146 0 H166 V100 H196 V120 H146 Z" fill="currentColor" />
+      <path d="M210 0 H274 V20 H252 V120 H232 V20 H210 Z" fill="currentColor" />
+    </svg>
+  );
+}

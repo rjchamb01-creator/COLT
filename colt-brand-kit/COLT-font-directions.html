@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COLT — modern type directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;500;600&family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;600;700&family=Manrope:wght@700;800&family=Saira+Condensed:wght@400;500;600;700&family=Archivo:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#0B0B0C; --bone:#F4F2EC; --red:#FF2E1F; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Archivo',system-ui,sans-serif;background:#1b1b1d;color:var(--bone);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto}
+
+  .intro{background:var(--bone);color:var(--ink);padding:50px 46px 40px}
+  .intro .tag{display:inline-block;border:1px solid var(--ink);padding:5px 12px;font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:600;margin-bottom:18px}
+  .intro h1{font-family:'Space Grotesk';font-weight:700;font-size:28px}
+  .intro p{max-width:700px;margin-top:12px;font-size:15px;color:#33333a}
+
+  .dir{border-top:1px solid #2c2c30}
+  .meta{display:flex;align-items:baseline;gap:14px;padding:26px 46px 0}
+  .meta .n{font-family:'Space Grotesk';font-weight:700;font-size:20px;color:var(--red)}
+  .meta h2{font-family:'Space Grotesk';font-weight:600;font-size:17px;letter-spacing:.01em}
+  .meta .vibe{font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.18em;font-size:11px;opacity:.5;margin-left:auto}
+  .note{padding:4px 46px 0;font-size:13px;color:#9a9aa2;max-width:760px}
+
+  .stage{display:grid;grid-template-columns:1.4fr 1fr;gap:1px;background:#2c2c30;margin-top:22px}
+  .dark{background:var(--ink);display:flex;align-items:center;justify-content:center;padding:60px 24px;min-height:200px}
+  .light{background:var(--bone);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:40px 24px}
+  .mark{line-height:1;white-space:nowrap}
+  .o{color:var(--red)}
+  .small{font-size:30px!important}
+
+  /* per-direction type */
+  .d1{font-family:'Outfit';font-weight:300;font-size:78px;letter-spacing:.34em;padding-left:.34em}
+  .d2{font-family:'Space Grotesk';font-weight:500;font-size:82px;letter-spacing:.04em}
+  .d3{font-family:'Sora';font-weight:600;font-size:78px;letter-spacing:.02em}
+  .d4{font-family:'Manrope';font-weight:800;font-size:84px;letter-spacing:-.02em}
+  .d5{font-family:'Saira Condensed';font-weight:600;font-size:96px;letter-spacing:.06em}
+
+  .foot{background:var(--bone);color:var(--ink);padding:34px 46px 44px;font-size:14px}
+  .foot b{font-weight:800}
+  @media(max-width:760px){.stage{grid-template-columns:1fr}.d1,.d2,.d3,.d4{font-size:54px}.d5{font-size:64px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="intro">
+    <div class="tag">COLT · type directions · sleek + modern</div>
+    <h1>Same name, five modern faces</h1>
+    <p>Dropping the blocky retro letterforms. These are clean, contemporary grotesques and geometrics — the kind of type sleek athletic / streetwear brands actually use. Red still lives only in the “O”. Pick the one that feels right (or two to combine) and I'll redraw it as a custom vector wordmark so it's uniquely yours.</p>
+  </section>
+
+  <!-- 1 -->
+  <section class="dir">
+    <div class="meta"><span class="n">01</span><h2>Outfit — Light &amp; airy</h2><span class="vibe">minimal · premium</span></div>
+    <div class="note">Thin weight, wide tracking. Quiet, expensive, fashion-led. The most “Aesop / high-end” of the set.</div>
+    <div class="stage">
+      <div class="dark"><div class="mark d1">C<span class="o">O</span>LT</div></div>
+      <div class="light"><div class="mark d1 small" style="color:var(--ink)">C<span class="o">O</span>LT</div></div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="dir">
+    <div class="meta"><span class="n">02</span><h2>Space Grotesk — Modern tech</h2><span class="vibe">contemporary · characterful</span></div>
+    <div class="note">A current, slightly distinctive grotesque — clean but with personality in the letterforms. Reads “sports-tech platform”.</div>
+    <div class="stage">
+      <div class="dark"><div class="mark d2">C<span class="o">O</span>LT</div></div>
+      <div class="light"><div class="mark d2 small" style="color:var(--ink)">C<span class="o">O</span>LT</div></div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="dir">
+    <div class="meta"><span class="n">03</span><h2>Sora — Geometric &amp; confident</h2><span class="vibe">balanced · trustworthy</span></div>
+    <div class="note">Even, geometric, a true circular “O”. Modern without trying hard — the safe, versatile choice that ages well.</div>
+    <div class="stage">
+      <div class="dark"><div class="mark d3">C<span class="o">O</span>LT</div></div>
+      <div class="light"><div class="mark d3 small" style="color:var(--ink)">C<span class="o">O</span>LT</div></div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="dir">
+    <div class="meta"><span class="n">04</span><h2>Manrope — Bold neutral grotesque</h2><span class="vibe">strong · LSKD-adjacent</span></div>
+    <div class="note">Heavy, tight, no-nonsense — closest to the bold-sans energy of LSKD itself. Punchy at small sizes and on kit.</div>
+    <div class="stage">
+      <div class="dark"><div class="mark d4">C<span class="o">O</span>LT</div></div>
+      <div class="light"><div class="mark d4 small" style="color:var(--ink)">C<span class="o">O</span>LT</div></div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="dir">
+    <div class="meta"><span class="n">05</span><h2>Saira Condensed — Sleek athletic</h2><span class="vibe">tall · sporty</span></div>
+    <div class="note">Narrow and tall — the “teamwear / performance” feel. Sleek but unmistakably sport. Great for vertical lockups and jerseys.</div>
+    <div class="stage">
+      <div class="dark"><div class="mark d5">C<span class="o">O</span>LT</div></div>
+      <div class="light"><div class="mark d5 small" style="color:var(--ink)">C<span class="o">O</span>LT</div></div>
+    </div>
+  </section>
+
+  <section class="foot">
+    <b>Tell me the number</b> (01–05) that feels right — or two you'd like blended. I'll redraw it as a custom vector wordmark (font-independent, fully yours), refine the spacing and the red “O”, then rebuild the kit — icon, lockups, mono/black/white, SVG + PNG — in the chosen style. My read: <b>03 Sora</b> is the safest modern-and-sleek, <b>02 Space Grotesk</b> has the most personality, and <b>05 Saira</b> leans hardest into “sport”.
+  </section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/*
+  COLT — brand foundation (see BRAND.md).
+  Minimal palette: Ink carries the brand (dark base + text), Bone is the light
+  surface/text, Signal Red is the single accent (one primary action per screen —
+  used sparingly), Steel is muted/secondary UI. Dark-mode-first on Ink. Tailwind
+  v4 is CSS-first, so the design tokens live here in @theme — no tailwind.config.js.
+*/
+
+@theme {
+  /* Colour tokens — COLT palette (BRAND.md) */
+  --color-ink: #0b0b0c; /* primary / text / dark base */
+  --color-bone: #f4f2ec; /* light surfaces / text on ink */
+  --color-signal: #ff2e1f; /* accent — CTAs, level-ups, Heat (sparingly) */
+  --color-steel: #6b7280; /* secondary / muted UI + captions */
+
+  /* Type — Saira Condensed for display/headlines, Archivo for body/UI (next/font). */
+  --font-display: var(--font-saira-condensed), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* The app is built for dark mode on Ink. */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  /* A whisper of Signal at the top for brand warmth — kept very low so red stays
+     an accent, not a wash. */
+  background-image: radial-gradient(
+    120% 80% at 50% -10%,
+    rgba(255, 46, 31, 0.06) 0%,
+    transparent 60%
+  );
+  background-attachment: fixed;
+}
+
+/* Display headlines: condensed, uppercase, tight — punchy and game-like. */
+.font-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+/*
+  The "rise" motif — an upward-chevron texture/divider (the climb to the next
+  grade). Reused on progress fills and section breaks. Signal-toned, low opacity.
+*/
+/* XP progress fill — signal with a faint upward-chevron texture (the climb). */
+.climb-fill {
+  background-image: repeating-linear-gradient(
+    -60deg,
+    rgba(11, 11, 12, 0.24) 0 2px,
+    transparent 2px 9px
+  );
+}
+
+.climb-divider {
+  height: 8px;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--color-signal) 0 2px,
+    transparent 2px 8px
+  );
+  -webkit-mask-image: repeating-linear-gradient(
+    90deg,
+    #000 0 1px,
+    transparent 1px 14px
+  );
+  mask-image: repeating-linear-gradient(90deg, #000 0 1px, transparent 1px 14px);
+  opacity: 0.35;
+}

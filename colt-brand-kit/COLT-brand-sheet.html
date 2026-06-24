@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COLT — brand sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Saira+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#0B0B0C; --bone:#F4F2EC; --red:#FF2E1F; --steel:#6B7280; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Archivo',system-ui,sans-serif;background:#1b1b1d;color:var(--bone);-webkit-font-smoothing:antialiased;line-height:1.55}
+  .wrap{max-width:1080px;margin:0 auto}
+  h2.sec{font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.16em;font-weight:600;font-size:15px;padding:34px 46px 0;opacity:.6}
+
+  .hero{background:var(--ink);padding:96px 46px 84px;text-align:center}
+  .hero svg{width:min(420px,72%);height:auto}
+  .hero .sub{margin-top:30px;font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.42em;font-size:13px;font-weight:400;opacity:.8;padding-left:.4em}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2c2c30}
+  .cell{padding:54px 46px;display:flex;align-items:center;justify-content:center;min-height:230px}
+  .cell.light{background:var(--bone)} .cell.dark{background:var(--ink)} .cell.red{background:var(--red)}
+  .cell svg{width:58%;height:auto}
+  .capbar{font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:400;opacity:.55;padding:12px 46px;background:#141416}
+
+  .icons{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-end;justify-content:center;padding:46px;background:#141416}
+  .iw{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .iw .t{font-family:'Saira Condensed';font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
+  .ic{border-radius:24%;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+
+  .clear{padding:48px 46px;background:var(--bone);color:var(--ink)}
+  .clear .box{border:2px dashed #c9c4b6;display:inline-block;padding:42px}
+  .clear p{font-size:14px;color:#444;margin-top:18px;max-width:660px}
+
+  .pal{display:grid;grid-template-columns:repeat(4,1fr)}
+  .sw{height:156px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;font-family:'Saira Condensed'}
+  .sw .nm{text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:600}
+  .sw .hx{font-weight:500;font-size:13px}
+  .sw .role{font-size:11px;opacity:.7;letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
+
+  .type{padding:42px 46px;background:#141416}
+  .type .row{display:flex;justify-content:space-between;border-bottom:1px solid #2c2c30;padding:18px 0;align-items:baseline;gap:20px;flex-wrap:wrap}
+  .type small{font-family:'Saira Condensed';letter-spacing:.12em;text-transform:uppercase;font-size:12px;opacity:.5}
+
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2c2c30}
+  .rule{padding:34px 46px} .rule.do{background:#10210f} .rule.dont{background:#21100f}
+  .rule h3{font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.14em;font-size:14px;font-weight:600;margin-bottom:14px}
+  .rule ul{list-style:none;font-size:14px} .rule li{padding:6px 0 6px 22px;position:relative}
+  .rule li:before{position:absolute;left:0}
+  .do li:before{content:"✓";color:#5fd16a} .dont li:before{content:"✕";color:#ff6a5e}
+
+  .files{padding:42px 46px;background:var(--bone);color:var(--ink)}
+  .files h3{font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.14em;font-size:14px;font-weight:600;margin-bottom:14px}
+  .files code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;background:#e9e5da;padding:2px 7px;border-radius:5px;display:inline-block;margin:3px 0}
+  .files p{font-size:14px;color:#444;margin-top:14px} .files b{font-weight:800}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="hero">
+    <svg viewBox="-18 -18 310 156" xmlns="http://www.w3.org/2000/svg">
+      <path d="M43.66 17.6 A22 50 0 1 0 43.66 102.4" fill="none" stroke="#F4F2EC" stroke-width="20"/>
+      <path d="M68 60 A32 60 0 1 0 132 60 A32 60 0 1 0 68 60 Z M88 60 A12 40 0 1 0 112 60 A12 40 0 1 0 88 60 Z" fill="#FF2E1F" fill-rule="evenodd"/>
+      <path d="M146 0 H166 V100 H196 V120 H146 Z" fill="#F4F2EC"/>
+      <path d="M210 0 H274 V20 H252 V120 H232 V20 H210 Z" fill="#F4F2EC"/>
+    </svg>
+    <div class="sub">Rise through the grades</div>
+  </section>
+
+  <h2 class="sec">Primary logo</h2>
+  <div class="grid2">
+    <div class="cell light">
+      <svg viewBox="-18 -18 310 156" xmlns="http://www.w3.org/2000/svg">
+        <path d="M43.66 17.6 A22 50 0 1 0 43.66 102.4" fill="none" stroke="#0B0B0C" stroke-width="20"/>
+        <path d="M68 60 A32 60 0 1 0 132 60 A32 60 0 1 0 68 60 Z M88 60 A12 40 0 1 0 112 60 A12 40 0 1 0 88 60 Z" fill="#FF2E1F" fill-rule="evenodd"/>
+        <path d="M146 0 H166 V100 H196 V120 H146 Z" fill="#0B0B0C"/>
+        <path d="M210 0 H274 V20 H252 V120 H232 V20 H210 Z" fill="#0B0B0C"/>
+      </svg>
+    </div>
+    <div class="cell dark">
+      <svg viewBox="-18 -18 310 156" xmlns="http://www.w3.org/2000/svg">
+        <path d="M43.66 17.6 A22 50 0 1 0 43.66 102.4" fill="none" stroke="#F4F2EC" stroke-width="20"/>
+        <path d="M68 60 A32 60 0 1 0 132 60 A32 60 0 1 0 68 60 Z M88 60 A12 40 0 1 0 112 60 A12 40 0 1 0 88 60 Z" fill="#FF2E1F" fill-rule="evenodd"/>
+        <path d="M146 0 H166 V100 H196 V120 H146 Z" fill="#F4F2EC"/>
+        <path d="M210 0 H274 V20 H252 V120 H232 V20 H210 Z" fill="#F4F2EC"/>
+      </svg>
+    </div>
+  </div>
+  <div class="capbar">Full colour — on bone (left) and ink (right). The red O is the only accent; never colour another letter.</div>
+
+  <h2 class="sec">One-colour versions</h2>
+  <div class="grid2">
+    <div class="cell light">
+      <svg viewBox="-18 -18 310 156" xmlns="http://www.w3.org/2000/svg"><path d="M43.66 17.6 A22 50 0 1 0 43.66 102.4" fill="none" stroke="#0B0B0C" stroke-width="20"/><path d="M68 60 A32 60 0 1 0 132 60 A32 60 0 1 0 68 60 Z M88 60 A12 40 0 1 0 112 60 A12 40 0 1 0 88 60 Z" fill="#0B0B0C" fill-rule="evenodd"/><path d="M146 0 H166 V100 H196 V120 H146 Z" fill="#0B0B0C"/><path d="M210 0 H274 V20 H252 V120 H232 V20 H210 Z" fill="#0B0B0C"/></svg>
+    </div>
+    <div class="cell red">
+      <svg viewBox="-18 -18 310 156" xmlns="http://www.w3.org/2000/svg"><path d="M43.66 17.6 A22 50 0 1 0 43.66 102.4" fill="none" stroke="#FFFFFF" stroke-width="20"/><path d="M68 60 A32 60 0 1 0 132 60 A32 60 0 1 0 68 60 Z M88 60 A12 40 0 1 0 112 60 A12 40 0 1 0 88 60 Z" fill="#FFFFFF" fill-rule="evenodd"/><path d="M146 0 H166 V100 H196 V120 H146 Z" fill="#FFFFFF"/><path d="M210 0 H274 V20 H252 V120 H232 V20 H210 Z" fill="#FFFFFF"/></svg>
+    </div>
+  </div>
+  <div class="capbar">Mono black (print / embroidery) and reversed white on the red field.</div>
+
+  <h2 class="sec">App icon &amp; avatar</h2>
+  <div class="icons">
+    <div class="iw"><div class="ic"><svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" rx="46" fill="#0B0B0C"/><g transform="translate(74,35) scale(1.083)"><path d="M43.66 17.6 A22 50 0 1 0 43.66 102.4" fill="none" stroke="#FF2E1F" stroke-width="20"/></g></svg></div><div class="t">Primary · red C on ink</div></div>
+    <div class="iw"><div class="ic"><svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" rx="46" fill="#FF2E1F"/><g transform="translate(74,35) scale(1.083)"><path d="M43.66 17.6 A22 50 0 1 0 43.66 102.4" fill="none" stroke="#0B0B0C" stroke-width="20"/></g></svg></div><div class="t">Alt · ink C on red</div></div>
+    <div class="iw"><div class="ic"><svg width="84" height="84" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" rx="46" fill="#0B0B0C"/><g transform="translate(74,35) scale(1.083)"><path d="M43.66 17.6 A22 50 0 1 0 43.66 102.4" fill="none" stroke="#FF2E1F" stroke-width="20"/></g></svg></div><div class="t">@ small size</div></div>
+    <div class="iw"><div class="ic"><svg width="56" height="56" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" rx="46" fill="#0B0B0C"/><g transform="translate(74,35) scale(1.083)"><path d="M43.66 17.6 A22 50 0 1 0 43.66 102.4" fill="none" stroke="#FF2E1F" stroke-width="20"/></g></svg></div><div class="t">favicon</div></div>
+  </div>
+
+  <h2 class="sec">Clear space &amp; minimum size</h2>
+  <div class="clear">
+    <div class="box">
+      <svg width="220" viewBox="-18 -18 310 156" xmlns="http://www.w3.org/2000/svg">
+        <path d="M43.66 17.6 A22 50 0 1 0 43.66 102.4" fill="none" stroke="#0B0B0C" stroke-width="20"/>
+        <path d="M68 60 A32 60 0 1 0 132 60 A32 60 0 1 0 68 60 Z M88 60 A12 40 0 1 0 112 60 A12 40 0 1 0 88 60 Z" fill="#FF2E1F" fill-rule="evenodd"/>
+        <path d="M146 0 H166 V100 H196 V120 H146 Z" fill="#0B0B0C"/>
+        <path d="M210 0 H274 V20 H252 V120 H232 V20 H210 Z" fill="#0B0B0C"/>
+      </svg>
+    </div>
+    <p>Keep clear space around the wordmark equal to the width of the “O” on all sides. Minimum legible width: 72&nbsp;px on screen / 18&nbsp;mm in print. Below that, switch to the C icon.</p>
+  </div>
+
+  <h2 class="sec">Palette</h2>
+  <div class="pal">
+    <div class="sw" style="background:#0B0B0C;color:#F4F2EC"><span class="nm">Ink</span><span class="hx">#0B0B0C</span><span class="role">Primary / type</span></div>
+    <div class="sw" style="background:#F4F2EC;color:#0B0B0C"><span class="nm">Bone</span><span class="hx">#F4F2EC</span><span class="role">Background</span></div>
+    <div class="sw" style="background:#FF2E1F;color:#fff"><span class="nm">Signal Red</span><span class="hx">#FF2E1F</span><span class="role">Accent — sparingly</span></div>
+    <div class="sw" style="background:#6B7280;color:#fff"><span class="nm">Steel</span><span class="hx">#6B7280</span><span class="role">Secondary / UI text</span></div>
+  </div>
+  <div class="capbar">Roughly 70% ink/bone, 25% steel, 5% red. Red is for one thing at a time — the moment that matters (your rank, a streak, a CTA).</div>
+
+  <h2 class="sec">Type</h2>
+  <div class="type">
+    <div class="row"><span style="font-family:'Saira Condensed';text-transform:uppercase;font-weight:700;font-size:34px;letter-spacing:.04em">Saira Condensed — Headlines</span><small>Display · UI titles · free (Google Fonts)</small></div>
+    <div class="row"><span style="font-family:'Archivo';font-weight:700;font-size:22px">Archivo — UI &amp; labels</span><small>Buttons · stats · chips</small></div>
+    <div class="row"><span style="font-family:'Archivo';font-weight:400;font-size:17px">Archivo Regular handles body copy cleanly across the app.</span><small>Body</small></div>
+    <p style="font-size:13px;opacity:.55;margin-top:16px;font-family:'Saira Condensed';letter-spacing:.04em;text-transform:uppercase">The wordmark itself is custom-drawn vector (a tailored condensed grotesque) — not a live font, so it's uniquely yours and renders anywhere.</p>
+  </div>
+
+  <h2 class="sec">Do &amp; don't</h2>
+  <div class="rules">
+    <div class="rule do"><h3>Do</h3><ul>
+      <li>Give it room — respect the clear space.</li>
+      <li>Keep the red for the O only (or one accent moment).</li>
+      <li>Use the C icon when space is tight.</li>
+      <li>Lean into black &amp; bone; let red punch.</li>
+    </ul></div>
+    <div class="rule dont"><h3>Don't</h3><ul>
+      <li>Recolour other letters or add a second accent.</li>
+      <li>Stretch, skew, or add effects/shadows.</li>
+      <li>Place on a busy, low-contrast photo.</li>
+      <li>Change the letter spacing or proportions.</li>
+    </ul></div>
+  </div>
+
+  <div class="files">
+    <h3>Files in this kit</h3>
+    <code>colt-logo-primary</code> <code>colt-logo-dark</code> <code>colt-logo-black</code> <code>colt-logo-white</code> <code>colt-icon-ink</code> <code>colt-icon-red</code> <code>colt-lockup-stacked</code>
+    <p>Each is provided as <b>.svg</b> (infinite scale — design, web, print) and high-res <b>.png</b> (quick drops into docs, slides, socials). The SVGs are pure vector paths — no font needed to render them.</p>
+  </div>
+
+</div>
+</body>
+</html>

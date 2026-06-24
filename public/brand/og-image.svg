@@ -1,0 +1,10 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="COLT — Rise through the grades">
+  <rect width="1200" height="630" fill="#0B0B0C"/>
+  <g transform="translate(402,180) scale(1.5)">
+    <path d="M43.66 17.6 A22 50 0 1 0 43.66 102.4" fill="none" stroke="#F4F2EC" stroke-width="20"/>
+    <path d="M68 60 A32 60 0 1 0 132 60 A32 60 0 1 0 68 60 Z M88 60 A12 40 0 1 0 112 60 A12 40 0 1 0 88 60 Z" fill="#FF2E1F" fill-rule="evenodd"/>
+    <path d="M146 0 H166 V100 H196 V120 H146 Z" fill="#F4F2EC"/>
+    <path d="M210 0 H274 V20 H252 V120 H232 V20 H210 Z" fill="#F4F2EC"/>
+  </g>
+  <text x="600" y="500" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="600" font-size="34" letter-spacing="8" fill="#6B7280">RISE THROUGH THE GRADES</text>
+</svg>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colt vs Talyn — LSKD-style brand mockups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101012; --bone:#F5F2EA; --paper:#FFFFFF;
+    --colt-acid:#C9FF3D; --colt-steel:#6B7280;
+    --talyn-cobalt:#2B50FF; --talyn-frost:#EAEEF3;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Archivo',system-ui,sans-serif;background:#1a1a1c;color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0}
+  section{padding:0}
+  .anton{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:-.01em;line-height:.92}
+  .osw{font-family:'Oswald',sans-serif;text-transform:uppercase}
+  .label{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.28em;font-weight:500;font-size:11px}
+
+  /* intro */
+  .intro{background:var(--bone);padding:56px 48px 44px}
+  .intro h1{font-family:'Oswald';text-transform:uppercase;letter-spacing:.02em;font-weight:700;font-size:30px}
+  .intro p{max-width:680px;margin-top:14px;color:#33333a;font-size:15px}
+  .intro .tag{display:inline-block;margin-bottom:20px;border:1px solid var(--ink);padding:5px 12px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:500}
+
+  /* generic brand block */
+  .brand{position:relative}
+  .hero{padding:80px 48px 70px;position:relative;overflow:hidden}
+  .heroname{font-size:clamp(90px,20vw,210px)}
+  .herosub{font-family:'Oswald';text-transform:uppercase;letter-spacing:.42em;font-weight:300;font-size:13px;margin-top:18px}
+  .accentbar{height:10px;width:100%}
+
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2a2a2e}
+  .cell{padding:40px 48px}
+  .cell h3{font-family:'Oswald';text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:600;margin-bottom:22px;opacity:.55}
+
+  /* type specimen rows */
+  .spec{display:flex;flex-direction:column;gap:18px}
+  .spec .big{font-size:46px}
+  .spec .med{font-size:30px;font-family:'Archivo';font-weight:900;text-transform:uppercase;letter-spacing:.02em}
+  .spec .out{font-size:46px;-webkit-text-stroke:2px currentColor;color:transparent}
+  .spec small{font-family:'Oswald';letter-spacing:.2em;text-transform:uppercase;font-size:10px;opacity:.5;display:block;margin-top:2px}
+
+  /* monogram */
+  .mono{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .badge{width:104px;height:104px;display:flex;align-items:center;justify-content:center;font-family:'Anton';font-size:54px}
+  .badge.sq{border-radius:4px}
+  .badge.circle{border-radius:50%}
+
+  /* palette */
+  .pal{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .sw{height:120px;display:flex;flex-direction:column;justify-content:flex-end;padding:12px}
+  .sw span{font-family:'Oswald';font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+  .sw .hex{font-weight:600;font-size:12px}
+
+  /* app mock */
+  .appmock{padding:40px 48px}
+  .phone{max-width:300px;margin:0 auto;border-radius:26px;padding:18px;border:8px solid #000}
+  .chiprow{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+  .chip{font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:600;padding:5px 10px;border-radius:999px}
+  .ladder{margin-top:8px}
+  .lad{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;border-radius:10px;margin-bottom:6px;font-size:13px}
+  .lad b{font-family:'Oswald';font-weight:600}
+  .xp{font-family:'Oswald';font-weight:600;font-size:12px}
+  .heat{font-family:'Anton';font-size:34px;line-height:1}
+
+  .note{padding:18px 48px;font-size:12.5px;background:#0c0c0e;color:#9a9aa2;font-family:'Oswald';letter-spacing:.05em;text-transform:uppercase}
+  .foot{background:var(--ink);color:var(--bone);padding:40px 48px;font-size:13px}
+  .foot b{color:#fff}
+  @media(max-width:760px){.row{grid-template-columns:1fr}.cell,.hero,.intro,.appmock,.foot,.note{padding-left:26px;padding-right:26px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="intro">
+    <div class="tag">Brand exploration · June 2026</div>
+    <h1>Colt vs Talyn</h1>
+    <p>Two directions, one system. Both built on the LSKD playbook: a single heavy wordmark, a near-monochrome base, one disciplined accent, and confident athletic type. Nothing decorative — the product and the squad do the talking. Below: wordmark treatments, a monogram, the palette, and how the brand lands inside the app's gamification layer (Ladder · Caps · Tiers · XP · Squad · Heat).</p>
+  </section>
+
+  <!-- ============ COLT ============ -->
+  <section class="brand">
+    <div class="hero" style="background:var(--ink);color:var(--bone)">
+      <div class="label" style="color:var(--colt-acid)">Direction 01 — sport-native</div>
+      <div class="anton heroname" style="margin-top:18px">COLT</div>
+      <div class="herosub">Rise through the grades</div>
+    </div>
+    <div class="accentbar" style="background:var(--colt-acid)"></div>
+
+    <div class="row">
+      <div class="cell" style="background:var(--bone)">
+        <h3>Wordmark treatments</h3>
+        <div class="spec">
+          <div><span class="anton big">COLT</span><small>Anton · display lockup</small></div>
+          <div><span class="med">Colt</span><small>Archivo Black · UI / app icon text</small></div>
+          <div><span class="anton out">COLT</span><small>Outline · merch / hero overlay</small></div>
+        </div>
+      </div>
+      <div class="cell" style="background:var(--paper)">
+        <h3>Monogram</h3>
+        <div class="mono">
+          <div class="badge sq" style="background:var(--ink);color:var(--colt-acid)">C</div>
+          <div class="badge sq" style="background:var(--colt-acid);color:var(--ink)">C</div>
+          <div class="badge circle" style="border:3px solid var(--ink);color:var(--ink)">C</div>
+        </div>
+        <p style="margin-top:22px;font-size:13px;color:#444">A colt is a young athlete on the way up — in rugby league/union it's literally the junior grade. The mark leans muscular and fast: tight, blunt, all-caps.</p>
+      </div>
+    </div>
+
+    <div class="pal">
+      <div class="sw" style="background:var(--ink);color:var(--bone)"><span>Ink</span><span class="hex">#101012</span></div>
+      <div class="sw" style="background:var(--bone);color:var(--ink)"><span>Bone</span><span class="hex">#F5F2EA</span></div>
+      <div class="sw" style="background:var(--colt-acid);color:var(--ink)"><span>Acid</span><span class="hex">#C9FF3D</span></div>
+      <div class="sw" style="background:var(--colt-steel);color:#fff"><span>Steel</span><span class="hex">#6B7280</span></div>
+    </div>
+
+    <div class="appmock" style="background:#1a1a1c">
+      <div class="phone" style="background:var(--ink)">
+        <div class="label" style="color:var(--colt-acid)">The Ladder · U14 Squad</div>
+        <div class="chiprow">
+          <span class="chip" style="background:var(--colt-acid);color:var(--ink)">Tier 3</span>
+          <span class="chip" style="background:#26262b;color:var(--bone)">Squad</span>
+          <span class="chip" style="background:#26262b;color:var(--colt-acid)">🔥 Heat 12</span>
+        </div>
+        <div class="ladder">
+          <div class="lad" style="background:var(--colt-acid);color:var(--ink)"><b>1 · You</b><span class="xp">2,480 XP</span></div>
+          <div class="lad" style="background:#26262b;color:var(--bone)"><b>2 · J. Walsh</b><span class="xp">2,310 XP</span></div>
+          <div class="lad" style="background:#26262b;color:var(--bone)"><b>3 · T. Nu'u</b><span class="xp">2,055 XP</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="note">Colt — energetic, sport-native, instantly &ldquo;gets it&rdquo; · accent does the lifting</div>
+  </section>
+
+  <!-- ============ TALYN ============ -->
+  <section class="brand">
+    <div class="hero" style="background:#0F1216;color:var(--talyn-frost)">
+      <div class="label" style="color:var(--talyn-cobalt)">Direction 02 — coined / ownable</div>
+      <div class="anton heroname" style="margin-top:18px;letter-spacing:.01em">TALYN</div>
+      <div class="herosub">Talent, engineered</div>
+    </div>
+    <div class="accentbar" style="background:var(--talyn-cobalt)"></div>
+
+    <div class="row">
+      <div class="cell" style="background:var(--talyn-frost)">
+        <h3>Wordmark treatments</h3>
+        <div class="spec">
+          <div><span class="anton big">TALYN</span><small>Anton · display lockup</small></div>
+          <div><span class="med">Talyn</span><small>Archivo Black · UI / app icon text</small></div>
+          <div><span class="anton out">TALYN</span><small>Outline · merch / hero overlay</small></div>
+        </div>
+      </div>
+      <div class="cell" style="background:var(--paper)">
+        <h3>Monogram</h3>
+        <div class="mono">
+          <div class="badge sq" style="background:#0F1216;color:var(--talyn-cobalt)">T</div>
+          <div class="badge sq" style="background:var(--talyn-cobalt);color:#fff">T</div>
+          <div class="badge circle" style="border:3px solid #0F1216;color:#0F1216">T</div>
+        </div>
+        <p style="margin-top:22px;font-size:13px;color:#444">Coined, premium, fully ownable. The cooler cobalt accent reads as tech/precision rather than raw sport — a platform brand more than a club brand.</p>
+      </div>
+    </div>
+
+    <div class="pal">
+      <div class="sw" style="background:#0F1216;color:var(--talyn-frost)"><span>Carbon</span><span class="hex">#0F1216</span></div>
+      <div class="sw" style="background:var(--talyn-frost);color:#0F1216"><span>Frost</span><span class="hex">#EAEEF3</span></div>
+      <div class="sw" style="background:var(--talyn-cobalt);color:#fff"><span>Cobalt</span><span class="hex">#2B50FF</span></div>
+      <div class="sw" style="background:#11151c;color:#7e8aa0"><span>Slate</span><span class="hex">#7E8AA0</span></div>
+    </div>
+
+    <div class="appmock" style="background:#1a1a1c">
+      <div class="phone" style="background:#0F1216">
+        <div class="label" style="color:var(--talyn-cobalt)">The Ladder · U14 Squad</div>
+        <div class="chiprow">
+          <span class="chip" style="background:var(--talyn-cobalt);color:#fff">Tier 3</span>
+          <span class="chip" style="background:#1b2026;color:var(--talyn-frost)">Squad</span>
+          <span class="chip" style="background:#1b2026;color:var(--talyn-cobalt)">🔥 Heat 12</span>
+        </div>
+        <div class="ladder">
+          <div class="lad" style="background:var(--talyn-cobalt);color:#fff"><b>1 · You</b><span class="xp">2,480 XP</span></div>
+          <div class="lad" style="background:#1b2026;color:var(--talyn-frost)"><b>2 · J. Walsh</b><span class="xp">2,310 XP</span></div>
+          <div class="lad" style="background:#1b2026;color:var(--talyn-frost)"><b>3 · T. Nu'u</b><span class="xp">2,055 XP</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="note">Talyn — premium, coined, ownable · platform-grade rather than club-grade</div>
+  </section>
+
+  <section class="foot">
+    <b>How to read these.</b> &nbsp;Same minimalist system, two personalities. <b>Colt</b> is the bolder, more sport-native swing — the accent and attitude carry it, and it earns instant meaning (the junior grade). <b>Talyn</b> is the safer, fully ownable platform brand — cooler, more &ldquo;tech&rdquo;, already clean on the register. Swap either accent (acid&nbsp;→&nbsp;cobalt, or try a rust/coral) without touching the type system. Fonts shown are free stand-ins (Anton + Archivo + Oswald); a paid condensed grotesk would tighten it further at production.
+  </section>
+
+</div>
+</body>
+</html>

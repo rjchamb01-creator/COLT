@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COLT — logo concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@500;700;800;900&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#0B0B0C; --bone:#F4F2EC; --accent:#2B50FF; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Archivo',system-ui,sans-serif;background:#1b1b1d;color:var(--bone);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto}
+  .anton{font-family:'Anton',sans-serif;text-transform:uppercase}
+  .label{font-family:'Oswald';text-transform:uppercase;letter-spacing:.28em;font-weight:500;font-size:11px;opacity:.65}
+
+  .intro{background:var(--bone);color:var(--ink);padding:52px 46px 40px}
+  .intro .tag{display:inline-block;border:1px solid var(--ink);padding:5px 12px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:500;margin-bottom:18px}
+  .intro h1{font-family:'Oswald';text-transform:uppercase;letter-spacing:.02em;font-weight:700;font-size:30px}
+  .intro p{max-width:700px;margin-top:12px;font-size:15px;color:#33333a}
+
+  .concept{border-top:1px solid #2c2c30}
+  .chead{display:flex;align-items:baseline;gap:14px;padding:30px 46px 6px}
+  .chead .n{font-family:'Anton';font-size:22px;color:var(--accent)}
+  .chead h2{font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-weight:600;font-size:18px}
+  .cdesc{padding:0 46px 22px;max-width:760px;font-size:13.5px;color:#a8a8b0}
+
+  .stage{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#2c2c30}
+  .panel{display:flex;align-items:center;justify-content:center;padding:54px 20px;min-height:240px}
+  .panel.dark{background:var(--ink)}
+  .panel.light{background:var(--bone)}
+  .icons{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:center;padding:30px 46px 40px;background:#141416}
+  .tile{width:96px;height:96px;border-radius:22px;display:flex;align-items:center;justify-content:center}
+  .tilecap{font-family:'Oswald';font-size:9px;letter-spacing:.16em;text-transform:uppercase;opacity:.5;text-align:center;margin-top:8px}
+  .iconwrap{display:flex;flex-direction:column;align-items:center}
+
+  /* wordmark */
+  .wm{font-family:'Anton';font-size:84px;letter-spacing:-.02em;line-height:1}
+  .wm .t{position:relative}
+  .wmsub{font-family:'Oswald';text-transform:uppercase;letter-spacing:.5em;font-size:11px;font-weight:300;text-align:center;margin-top:14px;padding-left:.5em}
+  .skew{transform:skewX(-9deg)}
+
+  /* accent strip */
+  .accents{background:var(--ink);padding:38px 46px 50px}
+  .accents h3{font-family:'Oswald';text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:600;opacity:.6;margin-bottom:22px}
+  .swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .acard{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .adot{width:100%;height:74px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Anton';font-size:30px;color:#fff}
+  .aname{font-family:'Oswald';text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:500;opacity:.85;text-align:center}
+  .ahex{font-family:'Oswald';font-size:11px;font-weight:600}
+
+  .foot{background:var(--bone);color:var(--ink);padding:34px 46px 44px;font-size:13.5px}
+  .foot b{font-weight:800}
+  @media(max-width:760px){.stage{grid-template-columns:1fr}.swatches{grid-template-columns:repeat(2,1fr)}.wm{font-size:60px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="intro">
+    <div class="tag">COLT · logo concepts · June 2026</div>
+    <h1>Five marks, blackout + one accent</h1>
+    <p>All built on the same idea: heavy, blunt, fast — a young athlete on the way up (a colt is literally the junior grade). Everything is black + bone with a single bold accent. Pick the concept you like and the accent from the strip at the bottom — they're interchangeable. Marks are vector, so they scale from app icon to jersey.</p>
+  </section>
+
+  <!-- 01 WORDMARK -->
+  <section class="concept">
+    <div class="chead"><span class="n">01</span><h2>Wordmark</h2></div>
+    <div class="cdesc">The purest LSKD move — the name is the logo. Tightly tracked Anton-style caps, one accent detail (the cut in the “O”). Works everywhere, nothing to misread.</div>
+    <div class="stage">
+      <div class="panel dark">
+        <div style="text-align:center">
+          <div class="wm" style="color:var(--bone)">C<span style="color:var(--accent)">O</span>LT</div>
+          <div class="wmsub" style="color:var(--bone)">Rise through the grades</div>
+        </div>
+      </div>
+      <div class="panel light">
+        <div class="wm" style="color:var(--ink)">COL<span style="position:relative">T<span style="position:absolute;left:0;bottom:-2px;width:100%;height:9px;background:var(--accent)"></span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 MONOGRAM C -->
+  <section class="concept">
+    <div class="chead"><span class="n">02</span><h2>Monogram “C” + motion</h2></div>
+    <div class="cdesc">A bold ring-C with a forward chevron cut into it — reads as speed and forward progress. This is the app-icon / avatar workhorse; the wordmark sits beside it for full lockups.</div>
+    <div class="stage">
+      <div class="panel dark">
+        <svg width="150" height="150" viewBox="0 0 200 200" fill="none">
+          <path d="M150 56 A62 62 0 1 0 150 144" stroke="var(--bone)" stroke-width="27" stroke-linecap="round"/>
+          <path d="M84 74 L112 100 L84 126" stroke="var(--accent)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="panel light">
+        <div style="display:flex;align-items:center;gap:26px">
+          <svg width="86" height="86" viewBox="0 0 200 200" fill="none">
+            <path d="M150 56 A62 62 0 1 0 150 144" stroke="var(--ink)" stroke-width="27" stroke-linecap="round"/>
+            <path d="M84 74 L112 100 L84 126" stroke="var(--accent)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="wm" style="color:var(--ink);font-size:64px">COLT</div>
+        </div>
+      </div>
+    </div>
+    <div class="icons">
+      <div class="iconwrap"><div class="tile" style="background:var(--ink)"><svg width="58" height="58" viewBox="0 0 200 200" fill="none"><path d="M150 56 A62 62 0 1 0 150 144" stroke="var(--bone)" stroke-width="27" stroke-linecap="round"/><path d="M84 74 L112 100 L84 126" stroke="var(--accent)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="tilecap">Icon · ink</div></div>
+      <div class="iconwrap"><div class="tile" style="background:var(--accent)"><svg width="58" height="58" viewBox="0 0 200 200" fill="none"><path d="M150 56 A62 62 0 1 0 150 144" stroke="#fff" stroke-width="27" stroke-linecap="round"/><path d="M84 74 L112 100 L84 126" stroke="var(--ink)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="tilecap">Icon · accent</div></div>
+      <div class="iconwrap"><div class="tile" style="background:var(--bone)"><svg width="58" height="58" viewBox="0 0 200 200" fill="none"><path d="M150 56 A62 62 0 1 0 150 144" stroke="var(--ink)" stroke-width="27" stroke-linecap="round"/><path d="M84 74 L112 100 L84 126" stroke="var(--accent)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="tilecap">Icon · bone</div></div>
+    </div>
+  </section>
+
+  <!-- 03 LADDER CHEVRONS -->
+  <section class="concept">
+    <div class="chead"><span class="n">03</span><h2>The Ladder mark</h2></div>
+    <div class="cdesc">Three ascending bars = climbing the Ladder / Tiers, the core of your gamification loop. Doubles as a clean abstract symbol and ties the brand straight to the product mechanic.</div>
+    <div class="stage">
+      <div class="panel dark">
+        <div style="display:flex;align-items:center;gap:26px">
+          <svg width="120" height="120" viewBox="0 0 200 200" fill="none">
+            <rect x="34"  y="118" width="34" height="48" rx="6" fill="var(--bone)"/>
+            <rect x="83"  y="86"  width="34" height="80" rx="6" fill="var(--bone)"/>
+            <rect x="132" y="46"  width="34" height="120" rx="6" fill="var(--accent)"/>
+          </svg>
+          <div class="wm" style="color:var(--bone);font-size:64px">COLT</div>
+        </div>
+      </div>
+      <div class="panel light">
+        <svg width="130" height="130" viewBox="0 0 200 200" fill="none">
+          <rect x="34"  y="118" width="34" height="48" rx="6" fill="var(--ink)"/>
+          <rect x="83"  y="86"  width="34" height="80" rx="6" fill="var(--ink)"/>
+          <rect x="132" y="46"  width="34" height="120" rx="6" fill="var(--accent)"/>
+        </svg>
+      </div>
+    </div>
+    <div class="icons">
+      <div class="iconwrap"><div class="tile" style="background:var(--ink)"><svg width="52" height="52" viewBox="0 0 200 200" fill="none"><rect x="34" y="118" width="34" height="48" rx="6" fill="var(--bone)"/><rect x="83" y="86" width="34" height="80" rx="6" fill="var(--bone)"/><rect x="132" y="46" width="34" height="120" rx="6" fill="var(--accent)"/></svg></div><div class="tilecap">Icon · ink</div></div>
+      <div class="iconwrap"><div class="tile" style="background:var(--accent)"><svg width="52" height="52" viewBox="0 0 200 200" fill="none"><rect x="34" y="118" width="34" height="48" rx="6" fill="#fff"/><rect x="83" y="86" width="34" height="80" rx="6" fill="#fff"/><rect x="132" y="46" width="34" height="120" rx="6" fill="var(--ink)"/></svg></div><div class="tilecap">Icon · accent</div></div>
+    </div>
+  </section>
+
+  <!-- 04 COLT EMBLEM -->
+  <section class="concept">
+    <div class="chead"><span class="n">04</span><h2>Colt emblem</h2></div>
+    <div class="cdesc">The literal nod — a stripped-back, angular colt head. More of a crest/badge direction (think club patch, jersey). Bolder personality, but more to get right than the abstract marks.</div>
+    <div class="stage">
+      <div class="panel dark">
+        <svg width="140" height="140" viewBox="0 0 120 120" fill="none">
+          <path d="M40 112 L48 56 L43 42 L57 39 L59 20 L66 18 L68 33 L88 40 L106 53 L106 64 L92 67 L84 60 L73 67 L70 88 L63 112 Z" fill="var(--bone)"/>
+          <circle cx="80" cy="52" r="3.4" fill="var(--accent)"/>
+          <path d="M50 50 L55 40 L60 50 Z" fill="var(--accent)"/>
+        </svg>
+      </div>
+      <div class="panel light">
+        <div style="display:flex;align-items:center;gap:22px">
+          <svg width="84" height="84" viewBox="0 0 120 120" fill="none">
+            <path d="M40 112 L48 56 L43 42 L57 39 L59 20 L66 18 L68 33 L88 40 L106 53 L106 64 L92 67 L84 60 L73 67 L70 88 L63 112 Z" fill="var(--ink)"/>
+            <circle cx="80" cy="52" r="3.4" fill="var(--accent)"/>
+          </svg>
+          <div class="wm" style="color:var(--ink);font-size:60px">COLT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 SPEED WORDMARK -->
+  <section class="concept">
+    <div class="chead"><span class="n">05</span><h2>Speed wordmark</h2></div>
+    <div class="cdesc">Same name, leaned forward with a slipstream cut through the letters — for hero moments, kit, and motion. Pairs with the upright wordmark (01) as the everyday lockup.</div>
+    <div class="stage">
+      <div class="panel dark">
+        <div class="wm skew" style="color:var(--bone);position:relative">
+          COLT
+          <span style="position:absolute;left:-6%;top:46%;width:112%;height:8px;background:var(--accent);transform:skewX(0)"></span>
+        </div>
+      </div>
+      <div class="panel light">
+        <div class="wm skew" style="color:var(--ink)">CO<span style="color:var(--accent)">L</span>T</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCENT PICKER -->
+  <section class="accents">
+    <h3>Pick the accent (shown on the monogram)</h3>
+    <div class="swatches">
+      <div class="acard"><div class="adot" style="background:#2B50FF"><svg width="40" height="40" viewBox="0 0 200 200" fill="none"><path d="M150 56 A62 62 0 1 0 150 144" stroke="#fff" stroke-width="27" stroke-linecap="round"/><path d="M84 74 L112 100 L84 126" stroke="#0B0B0C" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="aname">Electric Blue</div><div class="ahex">#2B50FF</div></div>
+      <div class="acard"><div class="adot" style="background:#FF2E1F"><svg width="40" height="40" viewBox="0 0 200 200" fill="none"><path d="M150 56 A62 62 0 1 0 150 144" stroke="#fff" stroke-width="27" stroke-linecap="round"/><path d="M84 74 L112 100 L84 126" stroke="#0B0B0C" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="aname">Signal Red</div><div class="ahex">#FF2E1F</div></div>
+      <div class="acard"><div class="adot" style="background:#FF6A1A"><svg width="40" height="40" viewBox="0 0 200 200" fill="none"><path d="M150 56 A62 62 0 1 0 150 144" stroke="#fff" stroke-width="27" stroke-linecap="round"/><path d="M84 74 L112 100 L84 126" stroke="#0B0B0C" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="aname">Blaze Orange</div><div class="ahex">#FF6A1A</div></div>
+      <div class="acard"><div class="adot" style="background:#C75B39"><svg width="40" height="40" viewBox="0 0 200 200" fill="none"><path d="M150 56 A62 62 0 1 0 150 144" stroke="#fff" stroke-width="27" stroke-linecap="round"/><path d="M84 74 L112 100 L84 126" stroke="#0B0B0C" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="aname">Rust / Clay</div><div class="ahex">#C75B39</div></div>
+      <div class="acard"><div class="adot" style="background:#E8B500"><svg width="40" height="40" viewBox="0 0 200 200" fill="none"><path d="M150 56 A62 62 0 1 0 150 144" stroke="#fff" stroke-width="27" stroke-linecap="round"/><path d="M84 74 L112 100 L84 126" stroke="#0B0B0C" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="aname">Amber</div><div class="ahex">#E8B500</div></div>
+    </div>
+  </section>
+
+  <section class="foot">
+    <b>How to use this.</b> &nbsp;Tell me (1) which concept — 01 wordmark, 02 monogram, 03 ladder, 04 emblem, 05 speed — and (2) which accent. I'll lock that as the primary logo, then build out the full kit: app icon, horizontal + stacked lockups, mono/black/white versions, clear-space rules, and exportable SVG/PNG files. Type shown is the free Anton stand-in; at production I'd swap to a licensed condensed grotesk for a more custom feel.
+  </section>
+
+</div>
+</body>
+</html>
