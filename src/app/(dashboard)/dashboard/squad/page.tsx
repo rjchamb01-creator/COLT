@@ -230,8 +230,8 @@ export default async function SquadPage() {
   );
 }
 
-// The brand component for each milestone kind: caps → CapBadge, tier-ups →
-// TierBadge, Sets → a lime trophy chip.
+// The brand component for each milestone kind: badges → CapBadge, tier-ups →
+// TierBadge, Challenges → a trophy chip. (Type/kind names keep "cap"/"set".)
 function MilestoneBadge({ m }: { m: SquadMilestone }) {
   if (m.kind === "cap") {
     return <CapBadge icon={m.capIcon} name={m.capName} className="shrink-0" />;
@@ -241,7 +241,7 @@ function MilestoneBadge({ m }: { m: SquadMilestone }) {
   }
   return (
     <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-signal/40 bg-signal/10 px-2.5 py-1 text-xs font-semibold text-signal">
-      <span aria-hidden>🏆</span> Set
+      <span aria-hidden>🏆</span> Challenge
     </span>
   );
 }
@@ -250,7 +250,7 @@ function MilestoneBadge({ m }: { m: SquadMilestone }) {
 function milestoneLine(m: SquadMilestone): string {
   switch (m.kind) {
     case "cap":
-      return `${m.athleteName} earned the ${m.capName} cap`;
+      return `${m.athleteName} earned the ${m.capName} badge`;
     case "set":
       return `${m.athleteName} finished ${m.setTitle}`;
     case "tier":

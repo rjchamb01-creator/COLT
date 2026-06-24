@@ -79,13 +79,13 @@ export function LogSession({
           )}
           {result.result.new_caps.length > 0 && (
             <div className="mt-1 text-bone/80">
-              New cap{result.result.new_caps.length > 1 ? "s" : ""}:{" "}
+              New badge{result.result.new_caps.length > 1 ? "s" : ""}:{" "}
               {result.result.new_caps.map((c) => `${c.icon} ${c.name}`).join(" · ")}
             </div>
           )}
           {result.result.set_completed && (
             <div className="mt-1 font-semibold text-signal">
-              🏆 Set complete — +{result.result.set_bonus_xp} bonus XP banked!
+              🏆 Challenge complete — +{result.result.set_bonus_xp} bonus XP banked!
             </div>
           )}
         </div>

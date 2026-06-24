@@ -1,11 +1,12 @@
 // Presentational gamification components, in brand vocabulary.
-// Tier badge, XP "climb" bar, Heat flame, and Caps — lime is the spark, orange
-// is reserved for Heat/reward moments (BRAND.md).
+// Tier badge, XP "climb" bar, Heat flame, and Badges — Signal Red is the single
+// accent, used sparingly for level-ups / Heat / reward moments (BRAND.md).
+// (Component/type names keep "Cap" — UI copy says "Badge"; see BRAND.md.)
 
 import type { Tier } from "@/lib/types";
 import { TIER_LABELS, tierProgress, formatXp } from "@/lib/gamification";
 
-// Tier colour ramp — cool → hot as you climb. Lime marks "Pro and above".
+// Tier colour ramp — muted → Signal Red as you climb. Signal marks "Pro and above".
 const TIER_STYLES: Record<Tier, string> = {
   rookie: "border-white/20 text-bone/70",
   rising: "border-steel/50 text-steel",
@@ -31,7 +32,7 @@ export function TierBadge({
   );
 }
 
-// XP progress through the current tier — the "climb". Lime fill with an
+// XP progress through the current tier — the "climb". Signal fill with an
 // upward-chevron texture, plus the to-next-tier copy.
 export function XpBar({ xp }: { xp: number }) {
   const p = tierProgress(xp);
@@ -57,7 +58,7 @@ export function XpBar({ xp }: { xp: number }) {
   );
 }
 
-// Heat — consecutive-day streak. Orange "on fire" once it's burning.
+// Heat — consecutive-day streak. Signal "on fire" once it's burning.
 export function StreakFlame({
   heat,
   className = "",

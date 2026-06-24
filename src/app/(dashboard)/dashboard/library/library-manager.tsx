@@ -122,7 +122,7 @@ function DrillForm({
   );
   const formRef = useRef<HTMLFormElement>(null);
 
-  const [sport, setSport] = useState<Sport>(editing?.sport ?? "rugby_league");
+  const [sport, setSport] = useState<Sport>(editing?.sport ?? "basketball");
   const [selected, setSelected] = useState<Set<string>>(
     new Set(editing?.skillIds ?? []),
   );

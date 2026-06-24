@@ -32,7 +32,7 @@ const ROLE_INTRO: Record<UserRole, string> = {
   admin: "Every club, every climber — at a glance.",
   club_admin: "Give your players a reason to train all week.",
   coach: "Your squads and the athletes you’re bringing through.",
-  parent: "See how your athletes are progressing — XP, tiers, and caps.",
+  parent: "See how your athletes are progressing — XP, tiers, and badges.",
   athlete: "Your XP, your tier, your ladder. Go take it.",
 };
 
@@ -185,17 +185,17 @@ export default async function DashboardPage() {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <div className="text-xs font-semibold uppercase tracking-widest text-signal">
-              This Week&apos;s Set
+              This Week&apos;s Challenge
             </div>
             <h2 className="mt-1 font-display text-2xl text-bone">
               The Matchday Challenge
             </h2>
             <p className="mt-1 text-sm text-bone/70">
               {setsTotal === 0
-                ? "No Set live for your squad yet — a fresh challenge drops next week. Keep training and hold your Heat."
+                ? "No Challenge live for your squad yet — a fresh one drops next week. Keep training and hold your Heat."
                 : setsComplete >= setsTotal
-                  ? "Set complete across the squad — bonus banked. Same time next week."
-                  : `Finish the Set — keep your Heat alive. ${setsComplete}/${setsTotal} ${
+                  ? "Challenge complete across the squad — bonus banked. Same time next week."
+                  : `Finish the Challenge — keep your Heat alive. ${setsComplete}/${setsTotal} ${
                       setsTotal === 1 ? "athlete" : "athletes"
                     } done this week.`}
             </p>
@@ -204,7 +204,7 @@ export default async function DashboardPage() {
             href="/dashboard/challenge"
             className="inline-flex shrink-0 items-center rounded-full bg-signal px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-ink transition-transform hover:scale-[1.03]"
           >
-            {setsTotal === 0 ? "See the Challenge" : "Finish the Set"} →
+            {setsTotal === 0 ? "See the Challenge" : "Finish the Challenge"} →
           </Link>
         </div>
       </section>

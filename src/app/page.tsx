@@ -14,12 +14,12 @@ export default function Home() {
         <h1 className="font-display text-5xl leading-[0.95] text-bone sm:text-7xl">
           Rise through
           <br />
-          the grades
+          the ranks
         </h1>
 
         <p className="max-w-md text-lg text-bone/70">
           Every session makes you better — and it feels like play. Climb the
-          ladder, earn your caps, and watch your progress rise.
+          ladder, earn your badges, and watch your progress rise.
         </p>
 
         <div className="flex flex-col gap-3 sm:flex-row">

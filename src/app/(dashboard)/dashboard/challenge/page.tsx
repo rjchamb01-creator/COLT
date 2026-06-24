@@ -84,8 +84,8 @@ export default async function MatchdayChallengePage() {
           The Matchday Challenge
         </h1>
         <p className="mt-1 text-bone/60">
-          A fresh Set every week. Finish it to bank bonus XP — and keep your Heat
-          alive.
+          A fresh Challenge every week. Finish it to bank bonus XP — and keep your
+          Heat alive.
         </p>
         <div className="climb-divider mt-4" />
       </section>
@@ -96,7 +96,7 @@ export default async function MatchdayChallengePage() {
           <Link href="/dashboard/athletes" className="text-signal hover:underline">
             add your first one
           </Link>{" "}
-          and this week&apos;s Set will be waiting.
+          and this week&apos;s Challenge will be waiting.
         </p>
       ) : (
         <ul className="grid gap-4">
@@ -124,7 +124,7 @@ export default async function MatchdayChallengePage() {
                     }`}
                   >
                     {set.completed
-                      ? "Set complete"
+                      ? "Challenge complete"
                       : `${set.doneCount}/${set.total} done`}
                   </span>
                 )}
@@ -132,8 +132,8 @@ export default async function MatchdayChallengePage() {
 
               {set === null ? (
                 <p className="rounded-lg border border-dashed border-white/15 px-4 py-5 text-center text-sm text-steel">
-                  No Set for this cohort yet — a new Matchday Challenge drops next
-                  week. Hit the{" "}
+                  No Challenge for this cohort yet — a new Matchday Challenge drops
+                  next week. Hit the{" "}
                   <Link
                     href="/dashboard/training"
                     className="text-signal hover:underline"
@@ -178,7 +178,7 @@ function AthleteSetCard({
       <div className="flex flex-col gap-1.5">
         <div className="flex items-baseline justify-between text-xs">
           <span className="font-semibold uppercase tracking-widest text-steel">
-            The Set
+            The Challenge
           </span>
           <span className="text-steel">
             {set.doneCount} of {set.total} banked
@@ -195,7 +195,7 @@ function AthleteSetCard({
       {set.completed ? (
         <div className="rounded-lg border border-signal/30 bg-signal/10 px-4 py-3 text-sm">
           <span className="font-display text-base text-signal">
-            Set complete 🏆
+            Challenge complete 🏆
           </span>
           <span className="ml-2 text-bone/80">
             Bonus banked. Same time next week — keep the streak rolling.

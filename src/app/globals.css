@@ -15,6 +15,17 @@
   --color-signal: #ff2e1f; /* accent — CTAs, level-ups, Heat (sparingly) */
   --color-steel: #6b7280; /* secondary / muted UI + captions */
 
+  /*
+    Play-palette — COLTS (8–13) REWARD MOMENTS ONLY (see BRAND.md "two-tier model").
+    Layered on top of the core tokens for tier-ups, badges, level-ups and celebrations.
+    Brand, marketing, and the entire Seniors (13+) experience keep the strict
+    single-accent rule (Ink/Bone + Signal Red). Established here for use as reward
+    surfaces are built — existing colour usage is NOT refactored onto these yet.
+  */
+  --color-play-1: #9be34a; /* lime — primary play accent */
+  --color-play-2: #4cc2ff; /* sky — secondary play accent */
+  --color-play-3: #ffb23e; /* amber — tertiary play accent */
+
   /* Type — Saira Condensed for display/headlines, Archivo for body/UI (next/font). */
   --font-display: var(--font-saira-condensed), "Arial Narrow", sans-serif;
   --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;

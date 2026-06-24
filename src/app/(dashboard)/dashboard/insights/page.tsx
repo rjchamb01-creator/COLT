@@ -32,14 +32,14 @@ const FEATURE_LABELS: Record<string, string> = {
 // Friendly labels for the domain ACTIONS (everything that isn't a page view).
 const ACTION_LABELS: Record<string, string> = {
   session_logged: "Sessions logged",
-  set_completed: "Sets completed",
+  set_completed: "Challenges completed",
   announcement_posted: "Posts to the Squad",
   session_scheduled: "Sessions scheduled",
   athlete_added: "Athletes added",
   message: "AI Coach messages",
   drill_created: "Drills authored",
   drill_updated: "Drills edited",
-  sets_rotated: "Weekly Sets rotated",
+  sets_rotated: "Weekly Challenges rotated",
 };
 
 const WINDOW_DAYS = 30;

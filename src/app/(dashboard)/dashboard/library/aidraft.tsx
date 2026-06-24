@@ -40,7 +40,7 @@ export function AIDraftTool({
   isAdmin: boolean;
   aiConfigured: boolean;
 }) {
-  const [sport, setSport] = useState<Sport>("rugby_league");
+  const [sport, setSport] = useState<Sport>("basketball");
   const [ageGroup, setAgeGroup] = useState<AgeGroup>("u13");
   const [goal, setGoal] = useState("");
   const [scope, setScope] = useState<"global" | "club">(isAdmin ? "global" : "club");

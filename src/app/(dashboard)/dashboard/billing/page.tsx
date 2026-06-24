@@ -23,7 +23,7 @@ const TIER_PERKS: Record<Exclude<SubscriptionTier, "free">, string[]> = {
     "A tailored expert program + weekly drops",
     "Full personal Ladder progression + challenges",
     "The deeper, position-specific drill library",
-    "See every session, cap and tier-up",
+    "See every session, badge and tier-up",
   ],
   tier2: [
     "Everything in Tier 1",
@@ -37,7 +37,7 @@ const LIVE: SubscriptionStatus[] = ["trialing", "active", "past_due"];
 
 // Status banner copy keyed off the ?status= we redirect back with.
 const STATUS_MESSAGES: Record<string, { tone: "good" | "bad"; text: string }> = {
-  success: { tone: "good", text: "You're in. Welcome to the next grade — time to sharpen up. 💪" },
+  success: { tone: "good", text: "You're in. Welcome to the next level — time to sharpen up. 💪" },
   cancelled: { tone: "bad", text: "No worries — checkout cancelled. Come back when you're ready." },
   already_subscribed: { tone: "bad", text: "That athlete's already on a plan. Use Manage billing to change it." },
   unavailable: { tone: "bad", text: "Payments aren't switched on yet. Hang tight." },

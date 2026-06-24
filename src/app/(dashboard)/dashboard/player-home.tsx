@@ -150,21 +150,21 @@ export async function PlayerHome({
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <div className="text-xs font-semibold uppercase tracking-widest text-signal">
-              This Week&apos;s Set
+              This Week&apos;s Challenge
             </div>
             <p className="mt-1 text-sm text-bone/70">
               {set === null
-                ? "No Set for your cohort yet — a fresh one drops next week. Keep your Heat alive."
+                ? "No Challenge for your cohort yet — a fresh one drops next week. Keep your Heat alive."
                 : set.completed
-                  ? "Set complete — bonus banked. Same time next week. 🏆"
-                  : `Finish the Set to bank bonus XP. ${set.doneCount}/${set.total} done.`}
+                  ? "Challenge complete — bonus banked. Same time next week. 🏆"
+                  : `Finish the Challenge to bank bonus XP. ${set.doneCount}/${set.total} done.`}
             </p>
           </div>
           <Link
             href="/dashboard/challenge"
             className="inline-flex shrink-0 items-center rounded-full bg-signal px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-ink transition-transform hover:scale-[1.03]"
           >
-            {set && !set.completed ? "Finish the Set" : "See the Set"} →
+            {set && !set.completed ? "Finish the Challenge" : "See the Challenge"} →
           </Link>
         </div>
       </section>

@@ -15,6 +15,20 @@ export const SignupSchema = z.object({
     .regex(/[0-9]/, { error: "Include at least one number." }),
 });
 
+// Password reset — request a link, then set a new password. Email mirrors login;
+// the new password reuses the signup strength rules.
+export const ForgotPasswordSchema = z.object({
+  email: z.email({ error: "Enter a valid email." }).trim(),
+});
+
+export const ResetPasswordSchema = z.object({
+  password: z
+    .string()
+    .min(8, { error: "Password must be at least 8 characters." })
+    .regex(/[a-zA-Z]/, { error: "Include at least one letter." })
+    .regex(/[0-9]/, { error: "Include at least one number." }),
+});
+
 export const CreateClubSchema = z.object({
   name: z.string().min(2, { error: "Club name must be at least 2 characters." }).trim(),
 });

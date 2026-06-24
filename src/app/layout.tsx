@@ -17,16 +17,16 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "COLT — Rise through the grades",
+  title: "COLT — Rise through the ranks",
   description:
-    "Rise through the grades. Climb the ladder, earn your caps, and keep your Heat alive — training and rewards that make every session count.",
+    "Rise through the ranks. Climb the ladder, earn your badges, and keep your Heat alive — training and rewards that make every session count.",
   icons: {
     icon: ["/brand/favicon.svg", "/brand/favicon-32.png"],
     apple: "/brand/apple-touch-icon-180.png",
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "COLT — Rise through the grades",
+    title: "COLT — Rise through the ranks",
     description: "Training and rewards that make every session count.",
     images: ["/brand/og-image.png"],
   },

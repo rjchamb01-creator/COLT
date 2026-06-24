@@ -221,7 +221,7 @@ function EventForm() {
           name="description"
           rows={3}
           className={FIELD}
-          placeholder="Focus on defence and the ruck. Be there 10 minutes early."
+          placeholder="Focus on defence and footwork. Be there 10 minutes early."
         />
         {state?.errors?.description?.map((e) => (
           <p key={e} className={ERR}>

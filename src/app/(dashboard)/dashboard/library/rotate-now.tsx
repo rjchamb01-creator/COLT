@@ -18,8 +18,8 @@ export function RotateNow() {
         setIsError(false);
         setMsg(
           res.created === 0
-            ? "Every cohort already has a live Set this week — nothing to rotate."
-            : `Fresh Set${res.created === 1 ? "" : "s"} live for ${res.created} cohort${
+            ? "Every cohort already has a live Challenge this week — nothing to rotate."
+            : `Fresh Challenge${res.created === 1 ? "" : "s"} live for ${res.created} cohort${
                 res.created === 1 ? "" : "s"
               } this week.`,
         );
@@ -33,10 +33,10 @@ export function RotateNow() {
   return (
     <section className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-4">
       <div className="text-sm">
-        <div className="font-semibold text-bone">Weekly Set rotation</div>
+        <div className="font-semibold text-bone">Weekly Challenge rotation</div>
         <div className="text-steel">
-          Runs automatically every Monday. Trigger this week&apos;s Sets now to
-          test it.
+          Runs automatically every Monday. Trigger this week&apos;s Challenges now
+          to test it.
         </div>
         {msg && (
           <p className={`mt-1.5 text-xs ${isError ? "text-signal" : "text-signal"}`}>

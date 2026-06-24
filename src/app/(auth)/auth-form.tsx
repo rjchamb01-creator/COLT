@@ -74,6 +74,15 @@ export function AuthForm({ mode }: { mode: "login" | "signup" }) {
         ))}
       </div>
 
+      {mode === "login" && (
+        <Link
+          href="/forgot-password"
+          className="-mt-2 self-end text-xs text-bone/50 transition-colors hover:text-bone"
+        >
+          Forgot password?
+        </Link>
+      )}
+
       <button
         type="submit"
         disabled={pending}

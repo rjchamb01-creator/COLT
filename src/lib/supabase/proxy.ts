@@ -14,6 +14,7 @@ const PUBLIC_PATHS = [
   "/",
   "/login",
   "/signup",
+  "/forgot-password",
   "/auth",
   "/claim",
   "/api/stripe/webhook",
