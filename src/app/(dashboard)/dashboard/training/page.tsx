@@ -33,7 +33,7 @@ function asAgeGroup(v: string | string[] | undefined): AgeGroup | undefined {
 
 // Build a /dashboard/training URL carrying the given filter selection. `skill`
 // is a skill key (from the taxonomy); undefined clears that facet.
-function filterHref(sport?: Sport, age?: AgeGroup, skill?: string): string {
+function filterHref(sport?: Sport | "sc", age?: AgeGroup, skill?: string): string {
   const params = new URLSearchParams();
   if (sport) params.set("sport", sport);
   if (age) params.set("age", age);
@@ -62,6 +62,8 @@ export default async function TrainingLibraryPage({
 
   const sp = await searchParams;
   const sport = asSport(sp.sport);
+  // The cross-sport Strength & Conditioning bank (drills with sport = NULL).
+  const scOnly = sp.sport === "sc";
   const age = asAgeGroup(sp.age);
   const skillKey = typeof sp.skill === "string" ? sp.skill : undefined;
 
@@ -100,7 +102,8 @@ export default async function TrainingLibraryPage({
   let drills: Drill[] = [];
   if (skillDrillIds === null || skillDrillIds.length > 0) {
     let query = supabase.from("drills").select("*");
-    if (sport) query = query.eq("sport", sport);
+    if (scOnly) query = query.is("sport", null);
+    else if (sport) query = query.eq("sport", sport);
     if (age) query = query.eq("age_group", age);
     if (skillDrillIds !== null) query = query.in("id", skillDrillIds);
     const { data } = await query.order("title");
@@ -177,7 +180,10 @@ export default async function TrainingLibraryPage({
           <span className="mr-1 text-xs font-semibold uppercase tracking-widest text-steel">
             Sport
           </span>
-          <Link href={filterHref(undefined, age, skillKey)} className={pill(!sport)}>
+          <Link
+            href={filterHref(undefined, age, skillKey)}
+            className={pill(!sport && !scOnly)}
+          >
             All
           </Link>
           {SPORTS.map((s) => (
@@ -189,6 +195,9 @@ export default async function TrainingLibraryPage({
               {SPORT_LABELS[s]}
             </Link>
           ))}
+          <Link href={filterHref("sc", age, skillKey)} className={pill(scOnly)}>
+            Strength &amp; Conditioning
+          </Link>
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <span className="mr-1 text-xs font-semibold uppercase tracking-widest text-steel">
@@ -262,7 +271,8 @@ export default async function TrainingLibraryPage({
                   </div>
                 </div>
                 <div className="mt-1 text-sm text-steel">
-                  {SPORT_LABELS[d.sport]} · {AGE_GROUP_LABELS[d.age_group]} ·{" "}
+                  {d.sport ? SPORT_LABELS[d.sport] : "All sports"} ·{" "}
+                  {AGE_GROUP_LABELS[d.age_group]} ·{" "}
                   <span className="text-signal">+{d.duration_min} XP</span>
                 </div>
                 <p className="mt-2 text-sm text-bone/70">{d.description}</p>

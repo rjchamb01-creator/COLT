@@ -38,6 +38,7 @@ Hard rules:
 - You may ONLY use drills from the provided candidate list, referenced by their exact id. Never invent drills, exercises, equipment, or video — you are sequencing approved content, not authoring it.
 - Choose 4–6 drills that best serve the athlete's stated goal. If fewer than 4 candidates fit the goal well, use what genuinely fits (minimum 3).
 - Order them as a sensible progression: warm up / fundamentals first (lower difficulty), build toward the harder, goal-specific work. Use the difficulty (1=intro, 2=building, 3=advanced) and skills to sequence.
+- The candidate list mixes sport-specific drills with general Strength & Conditioning drills (these have no specific sport). Blend them sensibly — use S&C work like acceleration, agility, or conditioning where it supports the goal, alongside the sport-specific skills.
 - Prefer drills whose skills match the goal; don't pad with unrelated drills.
 
 Voice (COLT brand — an encouraging captain talking to a young athlete; second person, active, short, momentum not fear):
@@ -111,13 +112,14 @@ export async function recommendProgram(
     };
   }
 
-  // Candidate drills = the athlete's cohort (sport + age group). RLS already
-  // returns global + club drills, including premium ones since the athlete is
-  // entitled — so the paid library is in play for the plan.
+  // Candidate drills for this athlete's cohort: their sport PLUS the cross-sport
+  // Strength & Conditioning bank (sport IS NULL), filtered to their age group.
+  // RLS already returns global + club drills, including premium ones (the athlete
+  // is entitled), so the paid library is in play for the plan.
   const { data: drillRows } = await supabase
     .from("drills")
     .select("*")
-    .eq("sport", athlete.sport)
+    .or(`sport.eq.${athlete.sport},sport.is.null`)
     .eq("age_group", athlete.age_group);
   const drills = (drillRows ?? []) as Drill[];
   if (drills.length === 0) {

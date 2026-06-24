@@ -100,7 +100,8 @@ function TabButton({
 }
 
 // Skills relevant to a sport = global skills (sport null) + that sport's own.
-function skillsForSport(skills: Skill[], sport: Sport): Skill[] {
+// sport "" = the cross-sport S&C bank → only the global (sport-null) skills apply.
+function skillsForSport(skills: Skill[], sport: Sport | ""): Skill[] {
   return skills.filter((s) => s.sport === null || s.sport === sport);
 }
 
@@ -122,7 +123,11 @@ function DrillForm({
   );
   const formRef = useRef<HTMLFormElement>(null);
 
-  const [sport, setSport] = useState<Sport>(editing?.sport ?? "basketball");
+  // "" = a cross-sport Strength & Conditioning drill (sport null). Preserve an
+  // edited S&C drill's "" rather than silently reassigning it to a sport.
+  const [sport, setSport] = useState<Sport | "">(
+    editing ? editing.sport ?? "" : "basketball",
+  );
   const [selected, setSelected] = useState<Set<string>>(
     new Set(editing?.skillIds ?? []),
   );
@@ -154,7 +159,7 @@ function DrillForm({
   }
 
   // When sport changes, drop any selected skills that no longer apply.
-  function onSportChange(next: Sport) {
+  function onSportChange(next: Sport | "") {
     setSport(next);
     const valid = new Set(skillsForSport(skills, next).map((s) => s.id));
     setSelected((prev) => new Set([...prev].filter((id) => valid.has(id))));
@@ -226,9 +231,10 @@ function DrillForm({
             id="sport"
             name="sport"
             value={sport}
-            onChange={(e) => onSportChange(e.target.value as Sport)}
+            onChange={(e) => onSportChange(e.target.value as Sport | "")}
             className={FIELD}
           >
+            <option value="">All sports (S&amp;C)</option>
             {SPORTS.map((s) => (
               <option key={s} value={s}>
                 {SPORT_LABELS[s]}
@@ -421,7 +427,8 @@ function DrillList({
                 </span>
               </div>
               <div className="text-xs text-steel">
-                {SPORT_LABELS[d.sport]} · {AGE_GROUP_LABELS[d.age_group]} ·{" "}
+                {d.sport ? SPORT_LABELS[d.sport] : "All sports"} ·{" "}
+                {AGE_GROUP_LABELS[d.age_group]} ·{" "}
                 <span className="text-signal">+{d.duration_min} XP</span>
                 {d.difficulty ? ` · L${d.difficulty}` : ""}
               </div>

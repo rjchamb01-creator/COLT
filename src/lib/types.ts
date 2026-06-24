@@ -62,7 +62,10 @@ export type AthleteInvitePreview = {
 export type Drill = {
   id: string;
   club_id: string | null;
-  sport: Sport;
+  // sport null = a cross-sport Strength & Conditioning drill (the shared S&C
+  // bank), applicable to every athlete regardless of sport; non-null = a
+  // sport-specific drill. Mirrors skills.sport and the club_id-null convention.
+  sport: Sport | null;
   age_group: AgeGroup;
   title: string;
   description: string;
@@ -333,10 +336,12 @@ export const SPORT_LABELS: Record<Sport, string> = {
   basketball: "Basketball",
 };
 
-// The MVP sports, in display order. Single source of truth — import this in UI
-// sport pickers/filters instead of re-listing the literals (so a new sport is a
-// one-line change here). Keep in sync with the `sport` DB enum.
-export const SPORTS: Sport[] = ["rugby_league", "soccer", "basketball"];
+// The sports OFFERED in the UI, in display order. Single source of truth — import
+// this in UI sport pickers/filters instead of re-listing the literals. Soccer is
+// intentionally hidden for now (pilot focus = QLD basketball + rugby league); its
+// `sport` enum value and SPORT_LABELS entry remain so any existing soccer data
+// still renders. Re-add it here to bring soccer back.
+export const SPORTS: Sport[] = ["rugby_league", "basketball"];
 
 export const AGE_GROUP_LABELS: Record<AgeGroup, string> = {
   u10: "Under 10",

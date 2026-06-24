@@ -46,7 +46,7 @@ export const CreateAthleteSchema = z.object({
     .string()
     .min(2, { error: "Name must be at least 2 characters." })
     .trim(),
-  sport: z.enum(["rugby_league", "soccer", "basketball"], { error: "Pick a sport." }),
+  sport: z.enum(["rugby_league", "basketball"], { error: "Pick a sport." }),
   ageGroup: z.enum(["u10", "u13", "u16"], { error: "Pick an age group." }),
 });
 
@@ -68,7 +68,7 @@ export const CreateAnnouncementSchema = z.object({
 // <select> is coerced to undefined so it stores as NULL (= the whole Squad).
 const optionalSport = z.preprocess(
   (v) => (v === "" || v == null ? undefined : v),
-  z.enum(["rugby_league", "soccer", "basketball"]).optional(),
+  z.enum(["rugby_league", "basketball"]).optional(),
 );
 const optionalAgeGroup = z.preprocess(
   (v) => (v === "" || v == null ? undefined : v),
@@ -121,6 +121,15 @@ const optionalDifficulty = z.preprocess(
     .optional(),
 );
 
+// Drill sport: optional — empty = a cross-sport Strength & Conditioning drill
+// (stored as sport null). All three sports stay valid here so the type lines up
+// with the AI-draft pipeline; the authoring UI only OFFERS rugby league +
+// basketball (soccer is hidden via the SPORTS list), so no new soccer is created.
+const optionalDrillSport = z.preprocess(
+  (v) => (v === "" || v == null ? undefined : v),
+  z.enum(["rugby_league", "soccer", "basketball"]).optional(),
+);
+
 export const CreateDrillSchema = z.object({
   title: z
     .string()
@@ -137,7 +146,7 @@ export const CreateDrillSchema = z.object({
     .int({ error: "Use whole minutes." })
     .min(1, { error: "Duration must be at least 1 minute." })
     .max(180, { error: "That's a long session — keep it under 180 minutes." }),
-  sport: z.enum(["rugby_league", "soccer", "basketball"], { error: "Pick a sport." }),
+  sport: optionalDrillSport,
   ageGroup: z.enum(["u10", "u13", "u16"], { error: "Pick an age group." }),
   videoUrl: optionalUrl,
   difficulty: optionalDifficulty,

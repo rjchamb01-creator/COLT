@@ -66,7 +66,7 @@ async function insertDrill(
     .from("drills")
     .insert({
       club_id: clubId,
-      sport: data.sport,
+      sport: data.sport ?? null,
       age_group: data.ageGroup,
       title: data.title,
       description: data.description,
@@ -148,7 +148,7 @@ export async function updateDrill(
   const { error: updateError } = await supabase
     .from("drills")
     .update({
-      sport: parsed.data.sport,
+      sport: parsed.data.sport ?? null,
       age_group: parsed.data.ageGroup,
       title: parsed.data.title,
       description: parsed.data.description,

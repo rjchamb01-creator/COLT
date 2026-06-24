@@ -318,7 +318,7 @@ export default async function InsightsPage() {
                           <span className="truncate text-bone" title={drill.title}>
                             {drill.title}
                             <span className="ml-1 text-xs text-steel">
-                              {SPORT_LABELS[drill.sport]} ·{" "}
+                              {drill.sport ? SPORT_LABELS[drill.sport] : "All sports"} ·{" "}
                               {AGE_GROUP_LABELS[drill.age_group]}
                             </span>
                           </span>
